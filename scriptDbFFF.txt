@@ -1,0 +1,37 @@
+--se crea la BD utilizada
+create database DbFFF
+go
+use [DbFFF]
+go
+
+
+create table [TblUsuarios](
+tipoIdentificación varchar(50) primary key,
+NumIdentificación varchar(50) not null,
+nombreCompleto varchar(200) not null,
+contrasenia varchar(50),
+correo varchar(250) not null,
+telefono int,
+direccion varchar(250) not null
+);
+go
+
+create table [TblArticulo](
+codigo int identity(1,1) primary key,
+nombre varchar(250) not null,
+marca varchar(250) not null,
+peso int not null,
+cantidad int not null,
+descripcion varchar(max) not null,
+tipoArticulo varchar(25) not null,
+calificacion varchar(25) not null,
+foto varchar(max) not null,
+estado varchar(20) not null,
+precioCompra decimal (28,2) not null,
+precioVenta decimal (28,2) not null,
+precioVentaIva decimal (28,2) not null,
+);
+go
+
+usuario: appFFF
+contraseña: Ucr2019
